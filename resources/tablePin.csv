@@ -1,0 +1,9 @@
+Name,Pin,Description,Arduino Mega Pin, ICSP Pin
+TCK,1,Test Clock (clock signal from the Atmel-ICE into the target device),A4,3
+TMS,5,Test Mode Select (control signal from the Atmel-ICE into the target device).,A5,the 5th wire (stripped one)
+TDI,9,Test Data In (data transmitted from the Atmel-ICE into the target device).,A7,4
+TDO,3,Test Data Out (data transmitted from the target device into the Atmel-ICE).,A6,1
+nTRST,8,Test Reset (optional, only on some AVR devices). Used to reset the JTAG TAP controller.
+nSRST,6,Reset (optional). Used to reset the target device. Connecting this pin is recommended since it allows the Atmel-ICE to hold the target device in a reset state, which can be essential to debugging in certain scenarios.
+VTG,4,Target voltage reference. The Atmel-ICE samples the target voltage on this pin in order to power the level converters correctly. The Atmel-ICE draws less than 3mA from this pin in debugWIRE mode and less than 1mA in other modes.,5V,2
+GND,2,10,Ground. Both must be connected to ensure that the Atmel-ICE and the target device share the same ground reference.,GND,6
